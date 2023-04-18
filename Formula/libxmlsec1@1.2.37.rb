@@ -10,6 +10,10 @@ class Libxmlsec1AT1237 < Formula
     regex(/href=.*?xmlsec1[._-]v?(\d+(?:\.\d+)+)\.t/i)
   end
 
+  bottle do
+    sha256 cellar: :any, arm64_ventura: "43d85c0557fd6298d6b3f4610b2af24df8b44d652bdaf7cf66d33c471851783b"
+  end
+
   depends_on "pkg-config" => :build
   depends_on "gnutls" # Yes, it wants both ssl/tls variations
   depends_on "libgcrypt"
